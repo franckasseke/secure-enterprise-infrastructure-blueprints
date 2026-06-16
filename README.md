@@ -1,8 +1,8 @@
 # Linux Security Monitoring Homelab
 
-Enterprise-style security monitoring lab using **Splunk**, **pfSense**, **Ubuntu Server**, **Rocky Linux**, and **Windows Server**.
+Enterprise-style security monitoring and infrastructure lab using **Splunk**, **pfSense**, **Ubuntu Server**, **Rocky Linux**, **Windows Server**, and a local AI workstation with **LM Studio**.
 
-This repository documents the design, deployment, configuration, and validation of a small enterprise security monitoring environment. The objective is to centralize logs from Linux, Windows, and network security components into Splunk, then use those logs for operational monitoring, troubleshooting, and security analysis.
+This repository documents the design, deployment, configuration, troubleshooting, and validation of a small enterprise security monitoring environment. The objective is to centralize logs from Linux, Windows, and network security components into Splunk, then use those logs for operational monitoring, troubleshooting, security analysis, and AI-assisted technical documentation.
 
 ## Project objectives
 
@@ -11,6 +11,7 @@ This repository documents the design, deployment, configuration, and validation 
 - Forward logs from Ubuntu Server, Rocky Linux, Windows Server, and pfSense.
 - Document the architecture like a professional consulting engagement.
 - Produce reusable technical documentation for recruiters, clients, and future projects.
+- Explore local AI tooling to support Linux, cloud, security and documentation workflows.
 
 ## Target architecture
 
@@ -29,6 +30,13 @@ This repository documents the design, deployment, configuration, and validation 
 | Windows Server    | -----> |                       |
 | Universal Forwarder|       +-----------------------+
 +-------------------+
+
++-------------------+
+| Ubuntu Desktop    |
+| LM Studio         |
+| Local LLM Testing |
+| AI Documentation  |
++-------------------+
 ```
 
 ## Technology stack
@@ -37,8 +45,9 @@ This repository documents the design, deployment, configuration, and validation 
 |---|---|
 | SIEM / Logs | Splunk Enterprise, Splunk Universal Forwarder |
 | Firewall / Network | pfSense |
-| Linux Systems | Ubuntu Server, Rocky Linux |
+| Linux Systems | Ubuntu Server, Rocky Linux, Ubuntu Desktop |
 | Windows Systems | Windows Server |
+| Local AI Workstation | LM Studio, AppImage, local LLM testing |
 | Virtualization | KVM / Virt-Manager |
 | Documentation | Markdown, architecture notes, implementation guides |
 
@@ -59,6 +68,19 @@ assets/     Diagrams, screenshots, and visual evidence
 - Splunk Universal Forwarder installation on Windows Server.
 - pfSense preparation for log forwarding.
 - Validation of Splunk receiving host logs.
+- Local AI workstation setup with LM Studio on Ubuntu.
+- AppImage and Electron/Chromium sandbox troubleshooting.
+- Local LLM model validation with `google/gemma-4-e4b`.
+
+## Labs
+
+| # | Lab | Focus |
+|---|---|---|
+| 01 | [Splunk Enterprise on Ubuntu](labs/01-splunk-enterprise-ubuntu/) | SIEM deployment and service validation |
+| 02 | [Rocky Linux Universal Forwarder](labs/02-rocky-linux-forwarder/) | Linux log forwarding |
+| 03 | [Windows Server Universal Forwarder](labs/03-windows-server-forwarder/) | Windows event log forwarding |
+| 04 | [pfSense Logs to Splunk](labs/04-pfsense-logs-to-splunk/) | Firewall log collection |
+| 05 | [Local AI Workstation on Ubuntu with LM Studio](labs/05-local-ai-workstation-lm-studio/) | Local LLM execution, AppImage troubleshooting and AI-assisted documentation |
 
 ## Skills demonstrated
 
@@ -68,16 +90,20 @@ assets/     Diagrams, screenshots, and visual evidence
 - Log forwarding
 - Network troubleshooting
 - Firewall log collection
+- AppImage troubleshooting
+- Local AI workstation setup
+- Technical documentation
 - Enterprise documentation
 - Security monitoring foundations
 
 ## Documentation roadmap
 
-- [ ] Architecture design
-- [ ] Splunk installation guide
-- [ ] Rocky Linux forwarder guide
-- [ ] Windows Server forwarder guide
-- [ ] pfSense log forwarding guide
+- [x] Architecture design
+- [x] Splunk installation guide
+- [x] Rocky Linux forwarder guide
+- [x] Windows Server forwarder guide
+- [x] pfSense log forwarding guide
+- [x] Local AI workstation lab with LM Studio
 - [ ] Troubleshooting notes
 - [ ] Security monitoring use cases
 - [ ] Screenshots and diagrams
@@ -86,4 +112,4 @@ assets/     Diagrams, screenshots, and visual evidence
 
 **Franck Ake**  
 Cloud & Infrastructure Security Architect in progress  
-Focus: Linux, Cloud Security, SIEM, Networking, Kubernetes, and Infrastructure Security.
+Focus: Linux, Cloud Security, SIEM, Networking, Kubernetes, AI-assisted Infrastructure, and Infrastructure Security.
