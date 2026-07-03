@@ -1,112 +1,79 @@
-# Linux Security Monitoring Homelab
+# Secure Enterprise Infrastructure Blueprints
 
-Enterprise-style security monitoring and infrastructure lab using **Splunk**, **pfSense**, **Ubuntu Server**, **Rocky Linux**, **Windows Server**, and a local AI workstation with **LM Studio**.
+This repository is being structured as a professional technical portfolio focused on **enterprise infrastructure security**.
 
-This repository documents the design, deployment, configuration, troubleshooting, and validation of a small enterprise security monitoring environment. The objective is to centralize logs from Linux, Windows, and network security components into Splunk, then use those logs for operational monitoring, troubleshooting, security analysis, and AI-assisted technical documentation.
+It documents security-oriented projects across Linux, cloud platforms, cloud-native workloads, infrastructure automation, and secure AI use cases. The objective is not to publish isolated tutorials, but to demonstrate a structured consulting approach: design, build, secure, validate, troubleshoot, document, and clean up.
 
-## Project objectives
+## Positioning
 
-- Build a realistic security monitoring homelab.
-- Deploy Splunk Enterprise as a central SIEM/log platform.
-- Forward logs from Ubuntu Server, Rocky Linux, Windows Server, and pfSense.
-- Document the architecture like a professional consulting engagement.
-- Produce reusable technical documentation for recruiters, clients, and future projects.
-- Explore local AI tooling to support Linux, cloud, security and documentation workflows.
+**Target profile:** Cloud & Infrastructure Security Architect in progress  
+**Focus areas:** Linux Security, Cloud Security, Kubernetes / Container Security, Infrastructure Automation, Compliance, and Secure AI use cases.
 
-## Target architecture
+This portfolio is designed for recruiters, technical managers, ESN/consulting firms, and potential freelance clients who want to evaluate practical security engineering capabilities through documented proof points.
+
+## Portfolio domains
 
 ```text
-+-------------------+        +-----------------------+
-| pfSense Firewall  | -----> |                       |
-| Network Logs      |        |                       |
-+-------------------+        |                       |
-                             |   Splunk Enterprise   |
-+-------------------+        |   Ubuntu Server       |
-| Rocky Linux       | -----> |   TCP 9997 / Web 8000 |
-| Universal Forwarder|       |                       |
-+-------------------+        |                       |
-                             |                       |
-+-------------------+        |                       |
-| Windows Server    | -----> |                       |
-| Universal Forwarder|       +-----------------------+
-+-------------------+
-
-+-------------------+
-| Ubuntu Desktop    |
-| LM Studio         |
-| Local LLM Testing |
-| AI Documentation  |
-+-------------------+
+00-portfolio-overview/
+01-linux-security-compliance/
+02-cloud-security-compliance/
+03-cloud-native-container-security/
+04-infrastructure-automation-iac/
+05-ai-security-mlops/
+99-architecture-decisions/
 ```
 
-## Technology stack
+### 01 — Linux Security & Compliance
 
-| Area | Technologies |
-|---|---|
-| SIEM / Logs | Splunk Enterprise, Splunk Universal Forwarder |
-| Firewall / Network | pfSense |
-| Linux Systems | Ubuntu Server, Rocky Linux, Ubuntu Desktop |
-| Windows Systems | Windows Server |
-| Local AI Workstation | LM Studio, AppImage, local LLM testing |
-| Virtualization | KVM / Virt-Manager |
-| Documentation | Markdown, architecture notes, implementation guides |
+Hardening, compliance audit, access control, centralized logging, cryptography, patching, secure services, and Linux incident response.
 
-## Repository structure
+### 02 — Cloud Security & Compliance
+
+Security baselines and compliance-oriented controls across Azure, AWS, GCP, and multicloud architecture patterns.
+
+### 03 — Cloud Native & Container Security
+
+Docker security, Kubernetes security, runtime detection, compliance, observability, and secure GitOps delivery.
+
+### 04 — Infrastructure Automation & IaC
+
+Ansible, Terraform, and Policy-as-Code used to industrialize secure infrastructure deployment and remediation.
+
+### 05 — AI Security & MLOps
+
+Secure AI use cases, AI threat modeling, risk registers, and infrastructure-oriented AI security practices.
+
+## V1 publication target
+
+The V1 of this portfolio will focus on a limited number of strong, documented projects rather than a large number of empty folders.
 
 ```text
-docs/       Technical documentation and architecture notes
-labs/       Step-by-step implementation labs
-scripts/    Useful commands and automation helpers
-assets/     Diagrams, screenshots, and visual evidence
+Linux Security & Compliance        -> 3 projects
+Cloud Security & Compliance        -> 3 projects
+Cloud Native Container Security    -> 1 project
+Infrastructure Automation & IaC    -> 2 projects
+AI Security & MLOps                -> 1 project
 ```
 
-## Current lab scope
+## Documentation rule
 
-- Splunk Enterprise installation on Ubuntu Server.
-- Splunk boot-start and systemd service configuration.
-- Splunk Universal Forwarder installation on Rocky Linux.
-- Splunk Universal Forwarder installation on Windows Server.
-- pfSense preparation for log forwarding.
-- Validation of Splunk receiving host logs.
-- Local AI workstation setup with LM Studio on Ubuntu.
-- AppImage and Electron/Chromium sandbox troubleshooting.
-- Local LLM model validation with `google/gemma-4-e4b`.
+Every published project must contain evidence. A project is not considered complete unless it includes implementation notes, security controls, validation evidence, troubleshooting notes, cleanup guidance when applicable, and references.
 
-## Labs
+Small projects use a single structured `README.md`. Larger projects can split documentation into multiple files.
 
-| # | Lab | Focus |
-|---|---|---|
-| 01 | [Splunk Enterprise on Ubuntu](labs/01-splunk-enterprise-ubuntu/) | SIEM deployment and service validation |
-| 02 | [Rocky Linux Universal Forwarder](labs/02-rocky-linux-forwarder/) | Linux log forwarding |
-| 03 | [Windows Server Universal Forwarder](labs/03-windows-server-forwarder/) | Windows event log forwarding |
-| 04 | [pfSense Logs to Splunk](labs/04-pfsense-logs-to-splunk/) | Firewall log collection |
-| 05 | [Local AI Workstation on Ubuntu with LM Studio](labs/05-local-ai-workstation-lm-studio/) | Local LLM execution, AppImage troubleshooting and AI-assisted documentation |
+## Methodology
 
-## Skills demonstrated
+```text
+Scope -> Discover -> Analyze Risk -> Build -> Break -> Fix -> Validate -> Document -> Clean Up
+```
 
-- Linux administration
-- Windows Server administration
-- SIEM deployment
-- Log forwarding
-- Network troubleshooting
-- Firewall log collection
-- AppImage troubleshooting
-- Local AI workstation setup
-- Technical documentation
-- Enterprise documentation
-- Security monitoring foundations
+This portfolio follows a consultant-style delivery mindset: every technical action must be explainable, reproducible, and defensible during a technical interview or client discussion.
 
-## Documentation roadmap
+## Current status
 
-- [x] Architecture design
-- [x] Splunk installation guide
-- [x] Rocky Linux forwarder guide
-- [x] Windows Server forwarder guide
-- [x] pfSense log forwarding guide
-- [x] Local AI workstation lab with LM Studio
-- [ ] Troubleshooting notes
-- [ ] Security monitoring use cases
-- [ ] Screenshots and diagrams
+The repository is currently being migrated from an initial Linux security monitoring homelab into a broader enterprise infrastructure security portfolio.
+
+Existing Splunk / pfSense / Linux / Windows monitoring content remains available in the current repository history and will be progressively reorganized into the appropriate portfolio domain.
 
 ## Author
 
