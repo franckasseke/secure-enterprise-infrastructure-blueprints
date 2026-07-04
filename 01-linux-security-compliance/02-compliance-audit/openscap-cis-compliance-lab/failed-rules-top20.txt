@@ -1,0 +1,62 @@
+# Top 20 failed OpenSCAP rules
+
+1. Install AIDE
+   Rule ID: xccdf_org.ssgproject.content_rule_package_aide_installed
+
+2. Build and Test AIDE Database
+   Rule ID: xccdf_org.ssgproject.content_rule_aide_build_database
+
+3. Configure AIDE to Verify the Audit Tools
+   Rule ID: xccdf_org.ssgproject.content_rule_aide_check_audit_tools
+
+4. Configure Periodic Execution of AIDE
+   Rule ID: xccdf_org.ssgproject.content_rule_aide_periodic_cron_checking
+
+5. Implement Custom Crypto Policy Modules for CIS Benchmark
+   Rule ID: xccdf_org.ssgproject.content_rule_configure_custom_crypto_policy_cis
+
+6. Ensure /tmp Located On Separate Partition
+   Rule ID: xccdf_org.ssgproject.content_rule_partition_for_tmp
+
+7. Disable the GNOME3 Login User List
+   Rule ID: xccdf_org.ssgproject.content_rule_dconf_gnome_disable_user_list
+
+8. Disable GNOME3 Automounting
+   Rule ID: xccdf_org.ssgproject.content_rule_dconf_gnome_disable_automount
+
+9. Disable GNOME3 Automount Opening
+   Rule ID: xccdf_org.ssgproject.content_rule_dconf_gnome_disable_automount_open
+
+10. Disable GNOME3 Automount running
+   Rule ID: xccdf_org.ssgproject.content_rule_dconf_gnome_disable_autorun
+
+11. Set GNOME3 Screensaver Inactivity Timeout
+   Rule ID: xccdf_org.ssgproject.content_rule_dconf_gnome_screensaver_idle_delay
+
+12. Set GNOME3 Screensaver Lock Delay After Activation Period
+   Rule ID: xccdf_org.ssgproject.content_rule_dconf_gnome_screensaver_lock_delay
+
+13. Ensure Users Cannot Change GNOME3 Screensaver Settings
+   Rule ID: xccdf_org.ssgproject.content_rule_dconf_gnome_screensaver_user_locks
+
+14. Ensure Users Cannot Change GNOME3 Session Idle Settings
+   Rule ID: xccdf_org.ssgproject.content_rule_dconf_gnome_session_idle_user_locks
+
+15. Ensure Only Users Logged In To Real tty Can Execute Sudo - sudo use_pty
+   Rule ID: xccdf_org.ssgproject.content_rule_sudo_add_use_pty
+
+16. Ensure Sudo Logfile Exists - sudo logfile
+   Rule ID: xccdf_org.ssgproject.content_rule_sudo_custom_logfile
+
+17. Require Re-Authentication When Using the sudo Command
+   Rule ID: xccdf_org.ssgproject.content_rule_sudo_require_reauthentication
+
+18. Ensure Local Login Warning Banner Is Configured Properly
+   Rule ID: xccdf_org.ssgproject.content_rule_banner_etc_issue_cis
+
+19. Ensure Remote Login Warning Banner Is Configured Properly
+   Rule ID: xccdf_org.ssgproject.content_rule_banner_etc_issue_net_cis
+
+20. Enable GNOME3 Login Warning Banner
+   Rule ID: xccdf_org.ssgproject.content_rule_dconf_gnome_banner_enabled
+
